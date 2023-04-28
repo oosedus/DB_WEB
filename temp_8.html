@@ -26,6 +26,81 @@
             <td>7987887985</td>
         </tr>
     </table>
+    <hr/>
+    <h3>Form definition</h3>
+    <form>
+        First name: <input type="text" name="fname"><br/>
+        Last name: <input type="text" name="lname"><br/>
+    </form>
+    <hr/>
+    <h3>Form Action</h3>
+    <form action="https://www.naver.com/" method="get">
+        First name: <input type="text" name="fname"><br/>
+        Last name: <input type="text" name="lname"><br/>
+        <input type="submit" value="Submit">
+    </form>
+    <hr/>
+    
+    <h3>Checkbox</h3>
+    <form action="" method="get">
+        <input type="checkbox" name="device" value="iPhone">iPhone<br/>
+        <input type="checkbox" name="device" value="iPad">iPad<br/>
+        <input type="submit" value="Submit">
+    </form>
+    <hr/>
+
+    <h3>Radio Button</h3>
+    <form action="" method="get">
+        <input type="radio" name="device" value="iPhone">iPhone<br/>
+        <input type="radio" name="device" value="iPad">iPad<br/>
+        <input type="submit" value="Submit">
+    </form>
+    <hr/>
+
+    <h3>Text Box</h3>
+    <form action="" method="get">
+        Your Full Name : <input type="text" name="fullname" size="30" maxlength="50">
+    </form>
+    <hr/>
+
+    <h3>Passwords</h3>
+    <form action="" method="get">
+        Password : <input type="password" name="password">
+        <input type="reset" value="reset"><br/>
+    </form>
+    <hr/>
+
+    <h3>Hidden Object</h3>
+    <form action="" method="get">
+        hidden : <input type="hidden" name="id" value="a84re"><br/>
+        button : <input type="button" onclick="alert('dingding')" value="click">
+    </form>
+    <hr/>
+
+    <h3>Button Tag</h3>
+    <button type="button" onclick="alert('dingdingding')">Click here!</button>
+    <hr/>
+
+    <h3>Text Area</h3>
+    <textarea rows="30" cols="50" name="text">
+        This is the text that you will see
+        and can edit in the area.
+    </textarea>
+    <hr/>
+
+    <h3>Menu</h3>
+    <select name="device" size="2">
+        <option value="iPhone">iPhone</option>
+        <option value="iPad">iPad</option>
+        <option value="iMac">iMac</option>
+    </select>
+    <hr/>
+
+    <h3>Label</h3>
+    <input type="checkbox" name="iPhone" id="iPhone">
+    <label for="iPhone">I like iPhone</label><br/>
+    <input type="checkbox" name="iPad" id="iPad">
+    <label for="iPad">I like iPad</label>
 </body>
 </html>
 

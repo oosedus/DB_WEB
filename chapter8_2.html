@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #div1, #div2 {
+        float: left;
+        width: 100px;
+        height: 35px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+    }
+</style>
+function allowDrop(ev){
+    ev.preventDefault();
+}
+
+function drag(ev){
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev){
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+    <body>
+        <canvas id="myCanvas"></canvas>
+
+        <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,100);
+        ctx.stroke();
+        </script>
+
+        <hr/>
+        <svg height="100" width="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="10" fill="red"/>
+            Sorry, your browser does not support inline SVG.
+        </svg>
+        <hr/>
+
+        <h2>Drag and Drop</h2>
+        <p>Drag the image back and forth between the two div elements.</p>
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="images\cry.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"></div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </body>
+</html>

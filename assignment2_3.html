@@ -1,0 +1,18 @@
+<script>
+    function getRandom(max) {
+        return (Math.floor(Math.random()*max))+1;
+    }
+
+    function compare_Fifty(num) {
+        if(num < 50){
+        alert("Hey, "+ num + " is less than 50.");
+    }
+    else{
+        alert("Yo, " + num + " is greater than or equal to 50.");
+    }
+    }
+
+    compare_Fifty(getRandom(100));
+    compare_Fifty(getRandom(100));
+    
+</script>

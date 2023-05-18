@@ -1,0 +1,33 @@
+<script>
+    num = 321564212;
+    str = num.toString();
+    result = [str[0]];
+
+    for(var x=1; x<str.length; x++)
+    {
+        if((str[x-1]%2 === 0)&&(str[x]%2 ===0))
+        {
+            result.push('-', str[x]);
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+
+alert(result.join(''));
+confirm('Are you sure you want to do that?');
+prompt('Enter you name');
+
+</script>
+
+<!--
+    problem 1.
+    
+    for(var i=0;i<16;i++) { 
+        if (i%2 ==0){
+            console.log("even");
+        }else {
+            console.log("odd");
+        }
+-->

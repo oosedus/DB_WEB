@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<body>
+    <form name="form01">
+        <input type="text" name="input01" value="" size="5">
+        <input type="text" name="input02" value="" size="1">
+        <input type="text" name="input03" value="" size="5">
+        =
+        <input type="text" name="input04" value="" size="5">
+
+    </form>
+    <form name="form02">
+    <input type="button" onClick="Add()" value="Add">
+    <input type="button" onClick="Subtract()" value="Subtract">
+    <input type="button" onclick="Multiply()" value="Multiply">
+    <input type="button" onclick="Divide()" value="Divide">
+    </form>
+</body>
+<script>
+    function Add(){
+        window.document.form01.input02.value = "+";
+        number1 = window.document.form01.input01.value;
+        number2 = window.document.form01.input03.value;
+        result = Number(number1) + Number(number2);
+        window.document.form01.input04.value = result;
+    }
+
+    function Subtract(){
+        window.document.form01.input02.value = "-";
+        number1 = window.document.form01.input01.value;
+        number2 = window.document.form01.input03.value;
+        result = Number(number1) - Number(number2);
+        window.document.form01.input04.value = result;
+    }
+
+    function Multiply(){
+        window.document.form01.input02.value = "*";
+        number1 = window.document.form01.input01.value;
+        number2 = window.document.form01.input03.value;
+        result = Number(number1)*Number(number2);
+        window.document.form01.input04.value = result;
+    }
+
+    function Divide(){
+        window.document.form01.input02.value = "/";
+        number1 = window.document.form01.input01.value;
+        number2 = window.document.form01.input03.value;
+        result = Number(number1)/Number(number2);
+        window.document.form01.input04.value = result;
+    }
+
+    
+</script>

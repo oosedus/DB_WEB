@@ -1,0 +1,32 @@
+<script>
+    var student = {
+        name: "David Rayy",
+        sclass : "VI",
+        rollno : 12
+    };
+
+    document.write(student.name+'\n');
+    document.write(student.sclass+'\n');
+    document.write(student.rollno+'\n');
+
+    //PROBLEM 2.
+
+    function _keys(obj)
+    {
+        var keys = [];
+        for (var key in obj) keys.push(key);
+        return keys;
+    }
+
+    function invert_key_value(obj){
+        var result = {};
+        var keys = _keys(obj);
+        for (var i = 0, length = keys.length; i<length; i++){
+            result[obj[keys[i]]] = keys[i];
+        }
+        return result;
+    }
+
+    document.write(_keys({red: "RED", green: "GREEN", white: "WHITE"})+'\n');
+    document.write(invert_key_value({red: "#1234", green: "#546", white: "#9875"}));
+</script>

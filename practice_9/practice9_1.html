@@ -18,7 +18,7 @@
         l = document.getElementById("mySelect").length;
         txt1 = txt1 + l;
         for(i=0;i<x.length;i++){
-            txt1 = txt1+"\n" + x.options[i].text;
+            txt1 = txt1+"\n" + x.options[i].innerHTML;
         }
         alert(txt1);
     }
